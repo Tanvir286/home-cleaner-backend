@@ -124,11 +124,10 @@ export class StripePayment {
       //   },
       // },
       capabilities: {
-        // card_payments: {
-        //   enabled: true,
-        // },
+        card_payments: {
+          requested: true,
+        },
         transfers: {
-          // enabled: true,
           requested: true,
         },
       },

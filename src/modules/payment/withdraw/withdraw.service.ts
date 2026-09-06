@@ -206,6 +206,7 @@ export class WithdrawService {
 
   //Check Connected Account Balance
   async checkAccountBalance(userId: string) {
+
     const user = await this.prisma.user.findUnique({
       where: { id: userId },
       select: { stripe_connect_id: true },
